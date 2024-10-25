@@ -8,7 +8,11 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Canvas Background="Gray" Name="MyCanvas" Focusable="True" KeyDown="OnkeyDown" KeyUp="OnKeyUp">
-            
+            <Rectangle Height="106" Width="20" Fill="White" Tag="roadMark" Canvas.Left="237" Canvas.Top="-152"></Rectangle>
+            <Rectangle Height="106" Width="20" Fill="White" Tag="roadMark" Canvas.Left="237" Canvas.Top="10"></Rectangle>
+            <Rectangle Height="106" Width="20" Fill="White" Tag="roadMark" Canvas.Left="237" Canvas.Top="176"></Rectangle>
+            <Rectangle Height="106" Width="20" Fill="White" Tag="roadMark" Canvas.Left="237" Canvas.Top="348"></Rectangle>
+
         </Canvas>
     </Grid>
 </Window>
