@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-
+        <Canvas Background="Gray" Name="MyCanvas" Focusable="True" KeyDown="OnkeyDown" KeyUp="OnKeyUp">
+            
+        </Canvas>
     </Grid>
 </Window>
