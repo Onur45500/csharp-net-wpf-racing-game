@@ -20,5 +20,15 @@ namespace csharp_net_wpf_racing_game
         {
             InitializeComponent();
         }
+
+        private void OnkeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void OnKeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
