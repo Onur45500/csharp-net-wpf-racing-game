@@ -42,6 +42,18 @@ namespace csharp_net_wpf_racing_game
         public MainWindow()
         {
             InitializeComponent();
+
+            MyCanvas.Focus();
+
+            gameTimer.Tick += GameLoop;
+            gameTimer.Interval = TimeSpan.FromMilliseconds(20);
+
+            StartGame();
+        }
+
+        private void GameLoop(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void OnkeyDown(object sender, KeyEventArgs e)
