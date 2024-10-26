@@ -68,7 +68,8 @@ namespace csharp_net_wpf_racing_game
 
         private void StartGame()
         {
-
+            
+            
         }
 
         private void ChangeCars(Rectangle car)
