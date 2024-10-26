@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace csharp_net_wpf_racing_game
 {
@@ -16,6 +17,28 @@ namespace csharp_net_wpf_racing_game
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        DispatcherTimer gameTimer = new DispatcherTimer();
+        List<Rectangle> itemRemover = new List<Rectangle>();
+
+        Random rand = new Random();
+
+        ImageBrush playerImage = new ImageBrush();
+        ImageBrush starImage = new ImageBrush();
+
+        Rect playerHitBox;
+
+        int speed = 15;
+        int playerScore = 10;
+        int carNum = 0;
+        int starCounter = 30;
+        int powerModeCounter = 200;
+
+        double score;
+        double i;
+
+        bool moveLeft, moveRight, gameOver, powerMode;
+
         public MainWindow()
         {
             InitializeComponent();
