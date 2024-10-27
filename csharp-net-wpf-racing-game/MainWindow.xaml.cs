@@ -105,7 +105,33 @@ namespace csharp_net_wpf_racing_game
 
         private void ChangeCars(Rectangle car)
         {
+            carNum = rand.Next(1, 6);
 
+            ImageBrush carImage = new ImageBrush();
+
+            switch(carNum)
+            {
+                case 1:
+                    carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/car1.png"));
+                    break;
+                case 2:
+                    carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/car2.png"));
+                    break;
+                case 3:
+                    carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/car3.png"));
+                    break;
+                case 4:
+                    carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/car4.png"));
+                    break;
+                case 5:
+                    carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/car5.png"));
+                    break;
+                case 6:
+                    carImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/car6.png"));
+                    break;
+            }
+
+            car.Fill = carImage;
         }
 
         private void PowerUp()
