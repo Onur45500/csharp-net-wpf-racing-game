@@ -17,6 +17,7 @@
             <Rectangle Tag="Car" Height="80" Width="55" Fill="Green" Canvas.Left="400" Canvas.Top="60" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
             <Label Name="scoreText" Content="Survived : 00 seconds" FontSize="18" FontWeight="Bold"></Label>
+            <Rectangle x:Name="player" Tag="Car" Height="80" Width="55" Fill="Green" Canvas.Left="237" Canvas.Top="268" HorizontalAlignment="Left" VerticalAlignment="Top"/>
         </Canvas>
     </Grid>
 </Window>

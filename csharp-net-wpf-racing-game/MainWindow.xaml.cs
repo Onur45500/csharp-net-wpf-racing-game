@@ -68,8 +68,39 @@ namespace csharp_net_wpf_racing_game
 
         private void StartGame()
         {
-            
-            
+            speed = 8;
+            gameTimer.Start();
+
+            moveLeft = false;
+            moveRight = false;
+            gameOver = false;
+            powerMode = false;
+
+            score = 0;
+
+            scoreText.Content = "Survived: 0 seconds";
+
+            playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/playerImage.png"));
+            starImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/star.png"));
+
+            player.Fill = playerImage;
+
+            MyCanvas.Background = Brushes.Gray;
+
+            foreach(var x in MyCanvas.Children.OfType<Rectangle>())
+            {
+                if((string)x.Tag == "Car")
+                {
+                    Canvas.SetTop(x, (rand.Next(100, 400) * -1));
+                    Canvas.SetLeft(x, (rand.Next(0, 430)));
+                    ChangeCars(x);
+                }
+
+                if((string)x.Tag == "star")
+                {
+                    itemRemover.Add(x);
+                }
+            }
         }
 
         private void ChangeCars(Rectangle car)
