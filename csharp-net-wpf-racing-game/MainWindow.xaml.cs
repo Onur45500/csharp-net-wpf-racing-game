@@ -136,7 +136,30 @@ namespace csharp_net_wpf_racing_game
 
         private void PowerUp()
         {
+            i += .5;
 
+            if(i > 4)
+            {
+                i = 1;
+            }
+
+            switch(i)
+            {
+                case 1:
+                    playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/powermode1.png"));
+                    break;
+                case 2:
+                    playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/powermode2.png"));
+                    break;
+                case 3:
+                    playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/powermode3.png"));
+                    break;
+                case 4:
+                    playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/powermode4.png"));
+                    break;
+            }
+
+            MyCanvas.Background = Brushes.LightCoral;
         }
 
         private void MakeStar()
