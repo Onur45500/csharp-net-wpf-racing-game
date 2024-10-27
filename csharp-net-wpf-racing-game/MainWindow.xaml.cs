@@ -78,6 +78,11 @@ namespace csharp_net_wpf_racing_game
             {
                 moveRight = false;
             }
+
+            if(e.Key == Key.Enter && gameOver == true)
+            {
+                StartGame();
+            }
         }
 
         private void StartGame()
