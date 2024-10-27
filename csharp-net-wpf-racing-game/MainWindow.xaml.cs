@@ -164,7 +164,18 @@ namespace csharp_net_wpf_racing_game
 
         private void MakeStar()
         {
+            Rectangle newStar = new Rectangle
+            {
+                Height = 50,
+                Width = 50,
+                Tag = "star",
+                Fill = starImage
+            };
 
+            Canvas.SetLeft(newStar, rand.Next(0, 430));
+            Canvas.SetTop(newStar, (rand.Next(100, 400) * -1));
+
+            MyCanvas.Children.Add(newStar);
         }
     }
 }
