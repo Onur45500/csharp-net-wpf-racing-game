@@ -58,7 +58,14 @@ namespace csharp_net_wpf_racing_game
 
         private void OnkeyDown(object sender, KeyEventArgs e)
         {
-
+            if(e.Key == Key.Left)
+            {
+                moveLeft = true;
+            }
+            if(e.Key == Key.Right)
+            {
+                moveRight = true;
+            }
         }
 
         private void OnKeyUp(object sender, KeyEventArgs e)
