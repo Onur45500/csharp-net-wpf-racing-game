@@ -91,6 +91,18 @@ namespace csharp_net_wpf_racing_game
                     }
                 }
 
+                if((string)x.Tag == "Car")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) + speed);
+
+                    if(Canvas.GetTop(x) > 500)
+                    {
+                        Canvas.SetTop(x, (rand.Next(100, 400) * -1));
+                        Canvas.SetLeft(x, rand.Next(0, 430));
+
+                        ChangeCars(x);
+                    }
+                }
             }
         }
 
