@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Security.Policy;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -28,6 +29,7 @@ namespace csharp_net_wpf_racing_game
 
         Rect playerHitBox;
 
+        int playerSpeed = 15;
         int speed = 15;
         int playerScore = 10;
         int carNum = 0;
@@ -53,7 +55,24 @@ namespace csharp_net_wpf_racing_game
 
         private void GameLoop(object? sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            score += .05;
+
+            starCounter -= 1;
+
+            scoreText.Content = "Survived " + score.ToString("#.#") + " Seconds";
+
+            playerHitBox = new Rect(Canvas.GetLeft(player), Canvas.GetTop(player), player.Width, player.Height);
+
+            if(moveLeft == true && Canvas.GetLeft(player) > 0)
+            {
+                Canvas.SetLeft(player, Canvas.GetLeft(player) - playerSpeed);
+            }
+            if(moveRight == true && Canvas.GetLeft(player) + 90 < Application.Current.MainWindow.Width)
+            {
+                Canvas.SetLeft(player, Canvas.GetLeft(player) + playerSpeed);
+            }
+
+
         }
 
         private void OnkeyDown(object sender, KeyEventArgs e)
