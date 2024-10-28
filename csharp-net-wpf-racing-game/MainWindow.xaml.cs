@@ -77,6 +77,21 @@ namespace csharp_net_wpf_racing_game
                 MakeStar();
                 starCounter = rand.Next(600, 900);
             }
+
+            foreach(var x in MyCanvas.Children.OfType<Rectangle>())
+            {
+
+                if((string)x.Tag == "roadMarks")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) + speed);
+
+                    if(Canvas.GetTop(x) > 510)
+                    {
+                        Canvas.SetTop(x, -152);
+                    }
+                }
+
+            }
         }
 
         private void OnkeyDown(object sender, KeyEventArgs e)
