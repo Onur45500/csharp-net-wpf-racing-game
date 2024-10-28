@@ -72,7 +72,11 @@ namespace csharp_net_wpf_racing_game
                 Canvas.SetLeft(player, Canvas.GetLeft(player) + playerSpeed);
             }
 
-
+            if(starCounter < 1 )
+            {
+                MakeStar();
+                starCounter = rand.Next(600, 900);
+            }
         }
 
         private void OnkeyDown(object sender, KeyEventArgs e)
