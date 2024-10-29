@@ -81,7 +81,7 @@ namespace csharp_net_wpf_racing_game
             foreach(var x in MyCanvas.Children.OfType<Rectangle>())
             {
 
-                if((string)x.Tag == "roadMarks")
+                if((string)x.Tag == "roadMark")
                 {
                     Canvas.SetTop(x, Canvas.GetTop(x) + speed);
 
@@ -102,6 +102,8 @@ namespace csharp_net_wpf_racing_game
 
                         ChangeCars(x);
                     }
+
+                    Rect carHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
                 }
             }
         }
