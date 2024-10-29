@@ -150,7 +150,7 @@ namespace csharp_net_wpf_racing_game
             scoreText.Content = "Survived: 0 seconds";
 
             playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/playerImage.png"));
-            starImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/star.png"));
+            starImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/playerImage.png"));
 
             player.Fill = playerImage;
 
