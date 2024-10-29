@@ -203,6 +203,9 @@ namespace csharp_net_wpf_racing_game
             }
 
             car.Fill = carImage;
+
+            Canvas.SetTop(car, (rand.Next(100, 400) * -1));
+            Canvas.SetLeft(car, rand.Next(0, 430));
         }
 
         private void PowerUp()
