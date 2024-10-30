@@ -161,6 +161,31 @@ namespace csharp_net_wpf_racing_game
                 }
 
                 //itemRemover.Clear();
+
+                if(score >= 10 && score < 20)
+                {
+                    speed = 12;
+                }
+
+                if(score >= 20 && score < 30)
+                {
+                    speed = 14;
+                }
+
+                if (score >= 30 && score < 40)
+                {
+                    speed = 16;
+                }
+
+                if (score >= 40 && score < 50)
+                {
+                    speed = 18;
+                }
+
+                if (score >= 50 && score < 60)
+                {
+                    speed = 20;
+                }
             }
         }
 
