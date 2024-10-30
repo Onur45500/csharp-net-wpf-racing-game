@@ -137,6 +137,22 @@ namespace csharp_net_wpf_racing_game
                         itemRemover.Add(x);
                     }
                 }
+
+                if(powerMode == true)
+                {
+                    powerModeCounter -= 1;
+
+                    PowerUp();
+
+                    if(powerModeCounter < 1)
+                    {
+                        powerMode = false;
+                    }
+                }
+                else
+                {
+                    playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/playerImage.png"));
+                }
             }
         }
 
