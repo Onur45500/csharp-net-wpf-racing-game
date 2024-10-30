@@ -104,6 +104,17 @@ namespace csharp_net_wpf_racing_game
                     }
 
                     Rect carHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                    if(playerHitBox.IntersectsWith(carHitBox) && powerMode == true)
+                    {
+                        ChangeCars(x);
+                    }
+                    else if(playerHitBox.IntersectsWith(carHitBox) && powerMode == false)
+                    {
+                        gameTimer.Stop();
+                        scoreText.Content += "Press enter to replay";
+                        gameOver = true;
+                    }
                 }
             }
         }
