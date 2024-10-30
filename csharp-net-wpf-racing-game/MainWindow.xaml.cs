@@ -116,6 +116,27 @@ namespace csharp_net_wpf_racing_game
                         gameOver = true;
                     }
                 }
+
+                if ((string)x.Tag == "star")
+                {
+                    Canvas.SetTop(x, Canvas.GetTop(x) + 5);
+
+                    Rect starHitBox = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
+
+                    if(playerHitBox.IntersectsWith(starHitBox))
+                    {
+                        itemRemover.Add(x);
+
+                        powerMode = true;
+
+                        powerModeCounter = 200;
+                    }
+
+                    if(Canvas.GetTop(x) > 400)
+                    {
+                        itemRemover.Add(x);
+                    }
+                }
             }
         }
 
