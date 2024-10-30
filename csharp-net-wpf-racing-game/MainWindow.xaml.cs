@@ -152,6 +152,7 @@ namespace csharp_net_wpf_racing_game
                 else
                 {
                     playerImage.ImageSource = new BitmapImage(new Uri("pack://application:,,,/images/playerImage.png"));
+                    MyCanvas.Background = Brushes.Gray;
                 }
             }
         }
